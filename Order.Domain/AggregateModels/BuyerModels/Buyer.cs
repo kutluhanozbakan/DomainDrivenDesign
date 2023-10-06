@@ -9,7 +9,11 @@ namespace Order.Domain.AggregateModels.BuyerModels
 {
     public class Buyer : BaseEntity
     {
-        public string FirstName { get; set; }
-        public string LastName { get; set; }
+        public Buyer(string userName)
+        {
+            UserName = userName;
+        }
+
+        public string UserName { get; private set; }
     }
 }
